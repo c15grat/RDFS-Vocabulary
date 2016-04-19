@@ -1,0 +1,32 @@
+@prefix programmapg: <http://dilab77.ionio.gr/swp/gratsanis/vocab#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+programmapg:Daskalos: rdf:type rdfs:Class;
+    rdfs:subClassof foaf:Person .
+programmapg:Dialeksi: rdf:type rdfs:Class .
+programmapg:Aithousa: rdf:type rdfs:Class .
+programmapg:Mathima: rdf:type rdfs:Class .
+programmapg:Καθηγητής: rdf:type rdf:Property;
+                rdfs:domain programmapg:Dialeksi;
+                rdfs:range programmapg:Daskalos .
+programmapg:Μάθημα: rdf:type rdf:Property;
+                rdfs:domain programmapg:Dialeksi;
+                rdfs:range programmapg:Mathima .
+programmapg:Αίθουσα: rdf:type rdf:Property;
+                rdfs:domain programmapg:Dialeksi;
+                rdfs:range programmapg:Aithousa .
+programmapg:Ώρα_έναρξης: rdf:type rdf:Property;
+                rdfs:domain programmapg:Dialeksi;
+                rdfs:range xsd:time .
+programmapg:Ώρα_λήξης: rdf:type rdf:Property;
+                rdfs:domain programmapg:Dialeksi;
+                rdfs:range xsd:time .
+programmapg:Εξάμηνο: rdf:type rdf:Property;
+                rdfs:domain programmapg:Dialeksi;
+                rdfs:range xsd:string .
+programmapg:Ημέρα: rdf:type rdf:Property;
+                rdfs:domain programmapg:Dialeksi;
+                rdfs:range xsd:string .
+
